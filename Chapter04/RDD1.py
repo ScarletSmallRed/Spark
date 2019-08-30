@@ -22,3 +22,14 @@ words.foreach(print)
 print('*' * 100)
 words = text.flatMap(lambda line: line.split(' '))
 words.foreach(print)
+
+# GroupByKey
+print('*' * 100)
+words = sc.parallelize([('Hadoop', 1), ('is', 1), ('good', 1), ('Spark', 1), ('is', 1), ('fast', 1), ('Spark', 1), ('is', 1), ('better', 1)])
+words1 = words.groupByKey()
+words1.foreach(print)
+
+# ReduceMap
+print('*' * 100)
+word1 = words.reduceByKey(lambda a, b: a + b)
+word1.foreach(print)
