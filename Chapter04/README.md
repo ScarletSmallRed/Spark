@@ -8,3 +8,9 @@ Key point:
 ```Python
 rdd.cache()
 ```
+## Custom Partitioning Method
+Key point:
+```Python
+data = sc.parallelize(range(10), 5)
+data.map(lambda x: (x, 1)).partitionBy(10, MyPartiontioner).map(lambda x: x[0]).saveAsTextFile('file:///')
+```
