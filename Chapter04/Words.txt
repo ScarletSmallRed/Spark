@@ -1,0 +1,4 @@
+I love Hadoop
+I love Spark
+Spark is fast
+Spark is better
