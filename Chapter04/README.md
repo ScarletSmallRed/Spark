@@ -17,3 +17,7 @@ data.map(lambda x: (x, 1)).partitionBy(10, MyPartiontioner).map(lambda x: x[0]).
 ## Key-Value Pair RDD Creation
 * Load from file
 * Create an RDD from a parallel collection (code [here](./PairRdd.py))
+## Common Key-Value Pair RDD Transportation Operations
+* GroupByValue
+* ReduceByValue (code [here](./Transformation1.py))
+* mapValues (code [here](./Transformation2.py))
